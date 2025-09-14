@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #101e29;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 20px;
+  background-color: rgba(107, 126, 139, 0.9);
+  border-radius: 0 0 10px 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #55b7f7;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  background: url("profile.jpg") no-repeat center center/cover;
+  filter: blur(10px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content .profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #55b7f7;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #55b7f7;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 15px;
+  background: #55b7f7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #101e29;
+}
+
+.about .profile-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 80px 20px;
+}
+
+.card {
+  background: #d6d2c8;
+  width: 320px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card .profile-pic {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #ffb300;
+}
+
+.card h2 {
+  margin: 10px 0 5px;
+  font-size: 22px;
+  color: #333;
+}
+
+.location {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.bio {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.interests {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.interests span {
+  background: #ffb300;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: white;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about,
+.contact {
+  background: #182c3d;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 40px;
+}
+
+.projects {
+  background: #0f1b25;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info {
+  margin-top: 20px;
+  text-align: left;
+  display: inline-block;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.contact-info i {
+  color: #55b7f7;
+  margin-right: 10px;
+}
+
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: #55b7f7;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+}
+
+#darkModeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  background-color: #555;
+}
+
+body.dark-mode #darkModeToggle {
+  background-color: #f0f0f0;
+  color: #101010;
+}
+
+body.dark-mode #darkModeToggle:hover {
+  background-color: #ddd;
+}
+
+
+body.dark-mode {
+  background-color: #101010;
+  color: #f0f0f0;
+}
+
+body.dark-mode .navbar {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode .btn {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode a {
+  color: #a0c4ff;
+}
+
+body.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .profile-card {
+    padding: 40px 10px;
+    gap: 15px;
+  }
+}
